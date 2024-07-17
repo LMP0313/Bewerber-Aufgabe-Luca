@@ -7,7 +7,7 @@ namespace WinFormsApp
 {
     public partial class FormMenu : Form
     {
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\sboeger\Repositories\Aera\Bewerber-Aufgabe\DB\Database.mdf;Integrated Security=True";
+        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Repos\Bewerber-Aufgabe\DB\Database.mdf;Integrated Security=True";
         private readonly string query = "SELECT CustomerID, FirstName, LastName, Email FROM Customer";
 
         public FormMenu()
