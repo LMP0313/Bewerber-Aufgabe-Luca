@@ -2,12 +2,14 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace WinFormsApp
 {
     public partial class FormMenu : Form
     {
-        private readonly string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Repos\Bewerber-Aufgabe\DB\Database.mdf;Integrated Security=True";
+        private readonly string connectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={System.IO.Path.GetFullPath(@"..\..\..\DB\Database.mdf")};Integrated Security=True";
         private readonly string query = "SELECT CustomerID, FirstName, LastName, Email FROM Customer";
 
         public FormMenu()
